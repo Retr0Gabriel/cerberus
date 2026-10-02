@@ -1,0 +1,164 @@
+{
+  "description": "Respostas FICTÍCIAS para rodar offline (empresa inexistente acmecorp.com.br). Nenhuma requisição real é feita.",
+  "rules": [
+    {
+      "url": "https://crt.sh/",
+      "params": {"q": "%.acmecorp.com.br"},
+      "json": [
+        {"id": 1, "common_name": "acmecorp.com.br", "name_value": "acmecorp.com.br\nwww.acmecorp.com.br"},
+        {"id": 2, "common_name": "*.api.acmecorp.com.br", "name_value": "*.api.acmecorp.com.br\nAPI.acmecorp.com.br"},
+        {"id": 3, "common_name": "vpn.acmecorp.com.br", "name_value": "vpn.acmecorp.com.br\nti@acmecorp.com.br"},
+        {"id": 4, "common_name": null, "name_value": "invalido..acmecorp.com.br"}
+      ]
+    },
+    {
+      "url": "https://crt.sh/",
+      "params": {"O": "Acme Corp S.A."},
+      "json": [
+        {"id": 10, "common_name": "acmepay.com.br", "name_value": "acmepay.com.br\nwww.acmepay.com.br"},
+        {"id": 11, "common_name": "acme-labs.io", "name_value": "acme-labs.io"}
+      ]
+    },
+    {
+      "url": "https://api.certspotter.com/v1/issuances",
+      "params": {"after": "100"},
+      "json": []
+    },
+    {
+      "url": "https://api.certspotter.com/v1/issuances",
+      "params": {"domain": "acmecorp.com.br"},
+      "json": [
+        {"id": "100", "dns_names": ["acmecorp.com.br", "www.acmecorp.com.br", "loja.acmecorp.com.br", "acmestore.com"]}
+      ]
+    },
+    {
+      "url": "https://web.archive.org/cdx/search/cdx",
+      "params": {"url": "*.acmecorp.com.br"},
+      "json": [
+        ["original"],
+        ["http://www.acmecorp.com.br/"],
+        ["https://blog.acmecorp.com.br/post/1"],
+        ["dev.acmecorp.com.br:8080/login"]
+      ]
+    },
+    {
+      "url": "https://cloudflare-dns.com/dns-query",
+      "params": {"name": "acmecorp.com.br", "type": "MX"},
+      "json": {"Status": 0, "Answer": [
+        {"type": 15, "data": "10 aspmx.l.google.com."},
+        {"type": 15, "data": "20 mx2.acmecorp-mail.net."}
+      ]}
+    },
+    {
+      "url": "https://cloudflare-dns.com/dns-query",
+      "params": {"name": "acmecorp.com.br", "type": "NS"},
+      "json": {"Status": 0, "Answer": [
+        {"type": 2, "data": "ns1.acmedns.com.br."},
+        {"type": 2, "data": "b.sec.dns.br."}
+      ]}
+    },
+    {
+      "url": "https://cloudflare-dns.com/dns-query",
+      "params": {"name": "acmecorp.com.br", "type": "TXT"},
+      "json": {"Status": 0, "Answer": [
+        {"type": 16, "data": "\"v=spf1 include:_spf.google.com \" \"include:spf.acmemailer.com.br ~all\""},
+        {"type": 16, "data": "\"google-site-verification=abc123\""}
+      ]}
+    },
+    {
+      "url": "https://cloudflare-dns.com/dns-query",
+      "params": {"name": "_dmarc.acmecorp.com.br", "type": "TXT"},
+      "json": {"Status": 0, "Answer": [
+        {"type": 16, "data": "\"v=DMARC1; p=reject; rua=mailto:dmarc@dmarc-acme.com,mailto:x@ag.dmarcian.com\""}
+      ]}
+    },
+    {
+      "url": "https://cloudflare-dns.com/dns-query",
+      "params": {"name": "www.acmecorp.com.br", "type": "CNAME"},
+      "json": {"Status": 0, "Answer": [
+        {"type": 5, "data": "www.acmecorp.com.br.cdn.cloudflare.net."}
+      ]}
+    },
+    {
+      "url": "https://cloudflare-dns.com/dns-query",
+      "params": {"name": "acmecorp.com", "type": "NS"},
+      "json": {"Status": 0, "Answer": [{"type": 2, "data": "ns1.acmedns.com.br."}]}
+    },
+    {
+      "url": "https://cloudflare-dns.com/dns-query",
+      "params": {"name": "acmecorp.net", "type": "NS"},
+      "json": {"Status": 0, "Answer": [{"type": 2, "data": "ns1.parkingcrew.net."}]}
+    },
+    {
+      "url": "https://cloudflare-dns.com/dns-query",
+      "params": {"type": "NS"},
+      "json": {"Status": 3}
+    },
+    {
+      "url": "https://acmecorp.com.br/",
+      "text": "<html><head><script>gtag('config', 'G-ACME12345'); (function(w,d,s,l,i){})(window,document,'script','dataLayer','GTM-ACM1234');</script></head><body><a href=\"https://www.acmepay.com.br/\">AcmePay</a> <a href=\"https://www.instagram.com/acmecorp\">Instagram</a> <a href=\"https://acmecorp.com.br/contato\">Contato</a></body></html>"
+    },
+    {
+      "url": "https://rdap.org/domain/acmecorp.com.br",
+      "json": {
+        "ldhName": "acmecorp.com.br",
+        "entities": [
+          {"roles": ["registrant"], "vcardArray": ["vcard", [["version", {}, "text", "4.0"], ["kind", {}, "text", "org"], ["fn", {}, "text", "Acme Corp S.A."], ["email", {}, "text", "dominios@acmecorp.com.br"]]],
+           "entities": [
+             {"roles": ["technical"], "vcardArray": ["vcard", [["fn", {}, "text", "Fulano de Tal"], ["email", {}, "text", "hostmaster@acmedns.com.br"]]]}
+           ]},
+          {"roles": ["registrar"], "vcardArray": ["vcard", [["fn", {}, "text", "Registro.br"]]]}
+        ],
+        "nameservers": [{"ldhName": "ns1.acmedns.com.br"}, {"ldhName": "b.sec.dns.br"}],
+        "events": [
+          {"eventAction": "registration", "eventDate": "2010-03-01T12:00:00Z"},
+          {"eventAction": "expiration", "eventDate": "2027-03-01T12:00:00Z"}
+        ]
+      }
+    },
+    {
+      "method": "POST",
+      "url": "https://api.anthropic.com/v1/messages",
+      "json": {
+        "id": "msg_replay_01",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-opus-5-5",
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "usage": {"input_tokens": 1200, "output_tokens": 600},
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_replay_01",
+            "name": "submit_analysis",
+            "input": {
+              "summary": "A Acme Corp opera ao menos duas outras marcas (AcmePay e Acme Labs) identificadas por certificados com a mesma organização. A infraestrutura de DNS e e-mail própria usa acmedns.com.br e acmecorp-mail.net. acmecorp.net aponta para um provedor de estacionamento de domínios e foi descartado.",
+              "matches": [
+                {"domain": "acmepay.com.br", "category": "relacionado", "confidence": 0.9, "reasoning": "Certificado com O=Acme Corp S.A. e link na página inicial do alvo."},
+                {"domain": "www.acmepay.com.br", "category": "relacionado", "confidence": 0.9, "reasoning": "Mesmo certificado de acmepay.com.br."},
+                {"domain": "acme-labs.io", "category": "relacionado", "confidence": 0.75, "reasoning": "Certificado emitido para a mesma organização."},
+                {"domain": "acmestore.com", "category": "relacionado", "confidence": 0.7, "reasoning": "SAN compartilhado no mesmo certificado do alvo."},
+                {"domain": "ns1.acmedns.com.br", "category": "relacionado", "confidence": 0.8, "reasoning": "Nameserver do alvo e do acmecorp.com; e-mail técnico do RDAP no mesmo domínio."},
+                {"domain": "acmedns.com.br", "category": "relacionado", "confidence": 0.8, "reasoning": "Domínio do contato técnico no RDAP e dos nameservers."},
+                {"domain": "mx2.acmecorp-mail.net", "category": "relacionado", "confidence": 0.7, "reasoning": "MX secundário com o nome da empresa."},
+                {"domain": "spf.acmemailer.com.br", "category": "relacionado", "confidence": 0.6, "reasoning": "Include SPF com o nome da marca."},
+                {"domain": "acmecorp.com", "category": "relacionado", "confidence": 0.7, "reasoning": "Mesmo nome em .com usando o nameserver próprio da empresa."},
+                {"domain": "aspmx.l.google.com", "category": "terceiros", "confidence": 0.95, "reasoning": "MX do Google Workspace."},
+                {"domain": "_spf.google.com", "category": "terceiros", "confidence": 0.95, "reasoning": "SPF do Google Workspace."},
+                {"domain": "b.sec.dns.br", "category": "terceiros", "confidence": 0.9, "reasoning": "DNS secundário do Registro.br."},
+                {"domain": "www.acmecorp.com.br.cdn.cloudflare.net", "category": "terceiros", "confidence": 0.9, "reasoning": "CDN Cloudflare."},
+                {"domain": "ag.dmarcian.com", "category": "terceiros", "confidence": 0.9, "reasoning": "Serviço de relatórios DMARC."},
+                {"domain": "dominio-inventado.com", "category": "relacionado", "confidence": 0.9, "reasoning": "Não estava nos candidatos; deve ser ignorado."}
+              ],
+              "false_positives": [
+                {"domain": "acmecorp.net", "reason": "Nameserver de estacionamento de domínios (parkingcrew); sem outra evidência."},
+                {"domain": "www.instagram.com", "reason": "Link para rede social, não é infraestrutura do alvo."}
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

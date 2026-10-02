@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# segredos
+.env
+
+# relatórios gerados (podem conter dados de alvos reais)
+resultado*.json
+reports/
+*.har
+revisao-*
